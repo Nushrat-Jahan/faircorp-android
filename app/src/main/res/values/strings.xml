@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Faircorp</string>
+    <string name="menu_website">Website</string>
+    <string name="menu_email">Send Email</string>
+    <string name="room">Room</string>
+    <string name="floor">Floor</string>
+    <string name="current_temperature">Current Temperature</string>
+    <string name="target_temperature">Target Temperature</string>
+    <string name="windows">Windows</string>
+    <string name="heaters">Heaters</string>
+</resources>

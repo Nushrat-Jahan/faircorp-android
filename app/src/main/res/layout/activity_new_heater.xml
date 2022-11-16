@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.NewHeaterActivity">
+
+
+    <EditText
+        android:id="@+id/newHeaterName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:ems="10"
+        android:hint="HEATER NAME"
+        android:inputType="textAutoCorrect"
+        android:singleLine="true"
+        android:textColorHint="#EAA2BA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/newHeaterPower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="HEATER POWER"
+        android:inputType="textPersonName"
+        android:textColorHint="#EAA2BA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newHeaterName" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupHeaterStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newHeaterPower">
+
+        <RadioButton
+            android:id="@+id/radioButtonHeaterOn"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text="on"
+            android:textColor="#E91E63" />
+
+        <RadioButton
+            android:id="@+id/radioButtonHeaterOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="off"
+            android:textColor="#E91E63" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/saveHeaterbtn"
+        android:layout_width="124dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#E91E63"
+        android:text="Save"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupHeaterStatus" />
+
+    <TextView
+        android:id="@+id/changeHeaterStatus"
+        android:layout_width="193dp"
+        android:layout_height="37dp"
+        android:text="HEATER STATUS"
+        android:textColor="#E91E63"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroupHeaterStatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newHeaterPower" />
+</androidx.constraintlayout.widget.ConstraintLayout>

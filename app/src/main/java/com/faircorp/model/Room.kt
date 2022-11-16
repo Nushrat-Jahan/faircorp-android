@@ -1,0 +1,20 @@
+package com.faircorp.model
+
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import com.faircorp.dto.RoomDto
+
+// ROOM table contains room id, name, floor, current temperature, target temperature and building id
+@Entity(tableName = "ROOM")
+data class Room(
+    @PrimaryKey val id: Long?,
+    @ColumnInfo(name = "room_name") val name: String?,
+    @ColumnInfo(name = "room_floor") val floor: Long?,
+    @ColumnInfo(name = "room_current_temperature") val currentTemperature: Double?,
+    @ColumnInfo(name = "room_target_temperature") val targetTemperature: Double?,
+    @ColumnInfo(name = "building_id") val buildingId: Long?
+){
+    fun toDto(): RoomDto =
+        RoomDto(id, name, floor, currentTemperature, targetTemperature, buildingId)
+}
